@@ -1,0 +1,116 @@
+$maincolor:#070211;
+$whitecolor:#FEFEFE;
+@import "../../Global.scss";
+.Contact{
+    background-color:inherit;
+    display: flex;
+    padding: 0;
+    @include mobile{
+        flex-direction: column;
+    }
+
+    .Left{
+        flex:1;
+        position: relative;
+            
+            background-color: inherit;
+            overflow: hidden;
+            
+            animation: Opacfade 0.5s ease-in-out;
+            @include mobile{
+                flex: 0.3;
+            }
+            img{
+                height: 500px;
+                width: 400px;
+                position: absolute;
+                bottom: 0px;
+                left: 150px;
+                @include mobile{
+                   left:0;
+                   padding: 1px;
+                }
+                
+            }
+        
+    }
+
+    .Right{
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        @include mobile{
+            flex: 0.7;
+        }
+
+        h2{
+            font-size: 35px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        form{
+            width: 50%;
+            height: 70%;
+            background-color: inherit;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            input{
+                height: 30px;
+                width: 300px;
+                font-size: 14px;
+                margin: 20px 0;
+                background-color: inherit;
+                border: .6px solid $whitecolor;
+                border-radius: 6px;
+                color:$whitecolor;
+                
+                &:focus{
+                    outline: none;
+                }
+            }
+            textarea{
+                height: 100px;
+                width: 300px;
+                font-size: 14px;
+                margin: 20px 0;
+                border-radius: 6px;
+                background-color: inherit;
+                color:$whitecolor;
+                border: .6px solid $whitecolor;
+                &:focus{
+                    outline: none;
+                }
+            }
+
+            button{
+                width: 300px;
+                height: 50px;
+                border-radius: 6px;
+                color: $whitecolor;
+                margin: 20px 0;
+                font-size: 20px;
+                font-weight: 600;
+                background-color: inherit;
+                border: .6px solid $whitecolor;
+                transition: all .5s ease-in-out;
+                &:focus{
+                    outline: none;
+                         
+                }
+                
+                &:hover{
+                    background-color: $whitecolor;
+                    color: $maincolor;
+                    
+                }
+            }
+        }
+        
+    }
+}

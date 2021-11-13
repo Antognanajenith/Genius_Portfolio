@@ -1,0 +1,95 @@
+$maincolor:#070211;
+$whitecolor:#FEFEFE;
+@import "../../Global.scss";
+
+.Testimony{
+    background:inherit;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+   overflow: hidden;
+    color:$maincolor;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    position: relative;
+
+    h1{
+        margin-top: 20px;
+        font-size: 40px;
+        color:inherit;
+        overflow: hidden;
+        @include mobile{
+            font-size: 30px;
+        }
+    }
+    .Container{
+        width: 100%;
+        height: 85%;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        @include mobile{
+            padding: 0 2px;
+            flex-direction: column;
+
+        }
+        .Card{
+            width: 250px;
+            height: 70%;
+            border-radius: 12px;
+            box-shadow:6px 2px 16px 0px rgba(136, 165, 191, 0.48) , -6px -2px 16px 0px rgba(255, 255, 255, 0.8)  ;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 20px;
+            transition: all .5s ease-in-out;
+            margin:10px 0;
+            @include mobile{
+                padding: 0 2px;
+                width: 250px;
+                height: 70%;
+                padding: 10px;
+            }
+            
+            &:hover{
+                transform: scale(1.1);
+                z-index: 1;
+            }
+
+            .Top{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img{
+                    
+                    &.leftuh,&.Rightuh{
+                        height: 25px;
+                        @include mobile{
+                            height: 20px;
+                        }
+                    }
+                    &.Middleuh{
+                        height: 60px;
+                        width: 60px;
+                        border-radius: 50%;
+                        margin:0 25px;
+                        @include mobile{
+                            height: 40px;
+                            width: 40px;
+                        }
+                    }
+                }
+            }
+            .Center{
+                padding:10px;
+            }
+            .Bottom{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+            }
+        }
+    }
+}

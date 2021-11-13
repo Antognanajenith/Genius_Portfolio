@@ -1,0 +1,54 @@
+$maincolor:#070211;
+$whitecolor:#FEFEFE;
+@import "../../Global.scss";
+
+.Menu{
+    width:250px;
+    height:300px;
+    position:fixed;
+    top:70px;
+    right:-300px;
+    z-index:2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    transition: all 0.5s ease-in-out;
+    opacity:0%;
+    @include mobile{
+        width:150px;
+    }
+    
+
+    &.Active{
+        right:0;
+        top:70px;
+        transition: all 0.5s ease;
+        opacity:100%;
+        border-bottom-left-radius:12px;
+        border-bottom-right-radius:12px;
+    }
+
+    ul{
+        margin:0;
+        padding:0;
+        list-style:none;
+        font-size:26px;
+        color:$maincolor;
+
+        li{
+            margin-bottom:10px;
+            a{
+                font-size:inherit;
+                color:inherit;
+                text-decoration:none;
+                    &:hover{
+                        text-decoration: underline;
+                        text-decoration-color:$maincolor;
+                    }
+            }
+        }
+
+    }
+}

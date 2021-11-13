@@ -1,0 +1,101 @@
+$maincolor:#070211;
+$whitecolor:#FEFEFE;
+@import "../../Global.scss";
+.Portfolio{
+    background:inherit;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    overflow:hidden;
+    color:$maincolor;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+
+    @keyframes Opacfade {
+        from 
+        {opacity: 0;}
+
+        to
+         {opactity: 1;}
+    }
+    h1{
+        
+        color:inherit;
+        font-size: 40px;
+        @include mobile {
+        
+            font-size: 35px;
+        }
+    }
+    ul{
+        margin: 10px;
+        padding:0;
+        list-style: none;
+        display: flex;
+
+        @include mobile {
+        
+            font-size: 20px;
+            flex-wrap: wrap;
+        }
+    }
+    .Container{
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap:wrap;
+        background:inherit;
+        transition:all 2s  ease-in-out;
+        @include mobile {
+        
+            width: 100%;
+        }
+        .Item{
+           width: 220px;
+           height: 150px;
+           border-radius: 12px;
+           border:1px solid lightgrey;
+           box-shadow:  0px 4px 12px #0000001a;
+           margin:10px 20px;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           color: $whitecolor;
+           position: relative;
+           transition: all 0.7s ease-in-out;
+            cursor: pointer;
+            @include mobile {
+        
+                width: 130px;
+                height: 100px;
+                margin:5px 10px;
+            }
+
+           h3{
+               position: absolute;
+               font-size: 20px;
+           }
+           img{
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              z-index:1 ; 
+             
+              
+           }
+
+           &:hover{
+               background-color:$maincolor ;
+               
+               img{
+                   opacity:0.2;
+                   z-index: 0;
+                
+               }
+           }
+           
+        }
+    }
+    
+}

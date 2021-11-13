@@ -1,0 +1,136 @@
+$maincolor:#070211;
+$whitecolor:#FEFEFE;
+@import "../../Global.scss";
+
+.Works{
+    background: inherit;
+    background-color:rgba(7, 2, 17, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @keyframes Opacfade {
+        from 
+        {opacity: 0;}
+
+        to
+         {opactity: 1;}
+    }
+    .Slider{
+        height: 350px;
+        display: flex;
+        position: absolute;
+        left:0;
+        transition: all 1s ease-in-out;
+        @include mobile{
+            height: 550px;
+            
+        }
+        
+        .Container{
+            width: 100vw;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            opacity: 0;
+            
+            .Item{
+                width:750px;
+                height:100%;
+                background-color:$whitecolor;
+                border-radius:20px;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                color: $maincolor;
+                @include mobile{
+                    flex-direction: column;
+                    width: 76%;
+                }
+                .Left{
+                    flex:0.4;
+                    height:100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    .Leftcontainer{
+                        width: 90%;
+                        height: 70%;
+                        display: flex;
+                        flex-direction:column;
+                        justify-content: space-between;
+                        @include mobile{
+                            align-items: center;
+                        }
+                        .Imagecontainer{
+                            width:50px;
+                            height:50px;
+                            border-radius:50%;
+                            background-color: $whitecolor;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center; 
+                            border: 0.004px solid $maincolor;
+                            
+                            img{
+                                width: 40px;
+                                
+                            };
+                        }
+                        h2{
+                            font-size: 20px;
+
+                        }
+                        p{
+                            font-size: 13px;
+                        }
+                        span{
+                            font-size: 12px;
+                            font-weight: 600;
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .Right{
+                    flex:0.6;
+                    height:100%;
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;                    
+                    overflow: hidden;background-size: cover;
+                    
+                    img{
+                        transform: rotate(-12deg);
+                        height: 100%;
+                        
+                    }
+                }
+            }
+            &.Active{
+                opacity: 1;
+            }
+        }
+        
+       
+    }
+    .Arrow {
+        position: absolute;
+        height: 50px;
+        cursor: pointer;
+        z-index: 2;
+        &.Lefta{
+            left: 10px;
+            transform: rotate(-90deg);
+        }
+        &.Righta{
+            right:10px;
+            transform: rotate(90deg);
+        }
+    }
+    
+    
+}

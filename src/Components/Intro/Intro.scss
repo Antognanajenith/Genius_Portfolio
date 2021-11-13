@@ -1,0 +1,117 @@
+$maincolor:#070211;
+$whitecolor:#FEFEFE;
+$widthh:768px;
+@import "../../Global.scss";
+
+.Intro{
+    background-color:inherit;
+    display:flex;
+
+    @include mobile {
+        
+        flex-direction: column;
+        align-items: center;
+    }
+    @include mobile {
+        
+        
+    }
+    
+    .Left{
+        flex:0.5;
+        
+        .Imgcontainer{
+            margin-top:97.3px;
+            margin-left: 130px;
+            background-color: inherit;
+            overflow: hidden;
+            width: 400px;
+            height: 500px;
+            animation: Opacfade 0.5s ease-in-out;
+            @include mobile {
+                margin-top:7.3px;
+            margin-left: 30px;
+        
+            }
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    
+    }
+    
+    .Right{
+        flex:0.5;
+        
+        color:$whitecolorr;
+        
+        
+
+        .Textwrapperintro{
+            background-color: inherit;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin-left: 80px;
+            animation: Opacfade 1s ease-in-out;
+            @include mobile {
+                margin-left: 10px;
+                justify-content:center;
+                align-items: center;
+            }
+            
+
+            h2{
+                color:inherit;
+                padding-bottom: 20px;
+                font-weight: 600;
+                font-size:45px;
+                @include mobile {
+        
+                    font-size:40px;
+                }
+            }
+            h3{
+                color:inherit;
+                padding-bottom: 20px;
+                font-weight: 500;
+                font-size:40px;
+                @include mobile {
+                    font-size:35px;
+        
+                }
+            }
+            h4{
+                color:inherit;
+                padding-bottom: 20px;
+                font-weight: 500;font-size:30px;
+                @include mobile {
+        
+                    font-size:25px;
+                }
+                span{
+                    color:inherit;
+                    font-weight: 400;font-size:30px;
+                   
+                }
+                .ityped-cursor {
+                    animation: blink 1s infinite;
+                   }
+                @keyframes blink{
+                    100%{
+                        opacity:0;
+                    }
+                    50%{
+                        opacity:1;
+                    }
+                }
+            }
+        }
+    }
+}
+

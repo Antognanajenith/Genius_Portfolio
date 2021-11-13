@@ -1,0 +1,23 @@
+$maincolor:#070211;
+$whitecolor:#FEFEFE;
+@import "../../Global.scss";
+.Portfoliolist{
+    
+        font-size: 15px;
+        margin-right: 5px;
+        padding:7px;
+        border-radius: 12px;
+        cursor: pointer;
+        @include mobile{
+            margin:5px;
+        }
+
+        &.Active{
+            background-color: $maincolor;
+            color: $whitecolor;
+            
+        }
+
+        
+    
+}
